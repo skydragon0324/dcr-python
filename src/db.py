@@ -60,7 +60,7 @@ class Country(DBO):
         headers = [header[0] for header in self.cursor.description]
         self.data = {k: v for k, v in zip(headers, region_data)}
         return True
-
+    
     @classmethod
     def list_all(cls):
         dbo = DBO()
